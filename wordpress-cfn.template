@@ -1,8 +1,8 @@
 AWSTemplateFormatVersion: '2010-09-09'
-Description: 'AWS CloudFormation Template to deploy WordPress on Amazon Linux with LAMP stack'
+Description: 'AWS CloudFormation Template to deploy WordPress on Amazon Linux with LAMP stack.'
 
 Parameters:
-  KeyName: 
+  KeyName:  # Changed from KeyPair to KeyName
     Description: 'Name of an existing EC2 KeyPair to allow SSH access to the instance'
     Type: AWS::EC2::KeyPair::KeyName
   InstanceType:
@@ -40,7 +40,7 @@ Resources:
       ImageId: ami-085ad6ae776d8f09c
       SecurityGroups:
         - !Ref InstanceSecurityGroup
-      KeyName: !Ref KeyName
+      KeyName: !Ref KeyName  # Changed from KeyPair to KeyName
       UserData:
         Fn::Base64: !Sub |
           #!/bin/bash
