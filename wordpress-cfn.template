@@ -4,7 +4,7 @@ Description: 'AWS CloudFormation Template to deploy WordPress on Amazon Linux wi
 Parameters:
   KeyName:  # Changed from KeyPair to KeyName
     Description: 'Name of an existing EC2 KeyPair to allow SSH access to the instance'
-    Type: AWS::EC2::KeyPair::KeyName
+    Type: AWS::EC2::KeyPair::Sailesh
   InstanceType:
     Description: 'EC2 instance type'
     Type: String
